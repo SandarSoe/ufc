@@ -1,19 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
 
-def re_sub(pattern, replacement, string):
-    def _r(m):
-        class _m():
-            def __init__(self, m):
-                self.m=m
-                self.string=m.string
-            def group(self, n):
-                return m.group(n) or ""
-
-        return re._expand(pattern, _m(n), replacement)
-
-    return re.sub(pattern, _r, string) 
-
 
 def convert(input):
     tallAA = u'\u102B'
